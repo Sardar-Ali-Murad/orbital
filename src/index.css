@@ -11,6 +11,19 @@ body {
   overflow-x: hidden;
 }
 
+.h-22 {
+  height: 22px;
+}
+.w-22 {
+  width: 22px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+
+.item-center {
+  align-items: center;
+}
 .css-1rgmeur {
   font-family: "Poppins", sans-serif !important;
 }
@@ -18,7 +31,7 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
-.mt-65{
+.mt-65 {
   margin-top: 65px;
 }
 
