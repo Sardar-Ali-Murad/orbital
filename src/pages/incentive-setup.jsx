@@ -29,7 +29,10 @@ const IncentiveSetup = () => {
                 <input type="radio" className="h-22 w-22 mt-15" />
                 <p className="mt-3 m-0 p-0">Targetted</p>
               </div>
-              <div className="d-flex flex-column gap-2 px-5">
+              <div
+                className="d-flex flex-column gap-2"
+                style={{ paddingLeft: "40px" }}
+              >
                 <div className="d-flex gap-2 item-center">
                   <input type="checkbox" className="h-22 w-22 mt-15" />
                   <p className="mt-3 p-0 m-0">Company</p>

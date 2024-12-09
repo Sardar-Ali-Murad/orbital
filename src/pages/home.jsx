@@ -15,7 +15,7 @@ const Home = () => {
             className="form-control h-200"
           ></textarea>
         </div>
-        <div className="col-lg-9 row">
+        <div className="col-lg-9">
           <div className="col-lg-12">
             <h1 className="heading">
               Exclusions : do not include these people and companies as
