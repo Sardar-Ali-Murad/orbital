@@ -18,6 +18,10 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.mt-65{
+  margin-top: 65px;
+}
+
 .justify-end {
   justify-content: end;
 }
