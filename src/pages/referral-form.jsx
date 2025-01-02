@@ -22,7 +22,12 @@ const ReferralForm = () => {
   const fetchReferralData = async () => {
     try {
       const response = await axios.get(
-        "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/referrals"
+        "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/referrals",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       setReferralData(response.data);
     } catch (error) {
@@ -46,7 +51,12 @@ const ReferralForm = () => {
     try {
       await axios.post(
         "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/referrals",
-        formData
+        formData,
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       alert("Referral data saved successfully!");
       fetchReferralData(); // Refresh the grid after saving

@@ -19,7 +19,12 @@ const IncentiveSetup = () => {
     try {
       setLoading(true); // Start loading
       const response = await axios.get(
-        "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/incentives"
+        "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/incentives",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       setIncentiveData(response.data || []);
     } catch (error) {
@@ -46,7 +51,12 @@ const IncentiveSetup = () => {
       setLoading(true); // Start loading
       await axios.post(
         "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/incentives",
-        formData
+        formData,
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       alert("Incentive saved successfully!");
       await fetchIncentiveData(); // Refresh data instantly

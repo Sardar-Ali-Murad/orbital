@@ -19,7 +19,12 @@ const CompnySetp1 = () => {
   const fetchCompanyDetails = async () => {
     try {
       const response = await axios.get(
-        "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/company/all"
+        "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/company/all",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       setCompanyDetails(response.data); // Store fetched data in state
     } catch (error) {
@@ -41,7 +46,12 @@ const CompnySetp1 = () => {
     try {
       await axios.post(
         "https://2660-2a0a-a547-f2a0-0-b8ae-d478-c531-347d.ngrok-free.app/api/company/save",
-        formData
+        formData,
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       fetchCompanyDetails(); // Immediately refresh table
       alert("Company details saved successfully!");
